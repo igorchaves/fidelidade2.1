@@ -1,0 +1,29 @@
+<style title="local">
+#crn-QRCode-416199 { 
+  width: 230px;
+}
+
+#crn-dynamic-select-692488 { 
+  opacity: 0.8;
+  width: 300px;
+}
+
+#crn-heading-600945 { 
+  font-family: Georgia, serif;
+  font-size: 15px;
+  text-align: center;
+  font-style: italic;
+}
+</style><ion-view class="pane">
+  <ion-header-bar align-title="center" class="bar bar-positive" xattr-theme="bar-positive" data-component="crn-ion-header-bar">
+    <div class="buttons buttons-left header-item">
+      <button class="button button-clear" menu-toggle="left" data-component="crn-button" xattr-type="button-clear"> <i class="icon ion-navicon"></i> </button>
+    </div>
+    <h1 class="title">Gerar QR Code</h1>
+    <div class="buttons buttons-right header-item">
+      
+    </div>
+  </ion-header-bar>
+  <ion-content data-component="crn-ion-content" class="scroll-content has-header">
+  <datasource name="obterempresas" entity="app.query879593" keys="id" rows-per-page="100" on-before-create="" on-after-create="" on-before-update="" on-after-update="" on-before-delete="" on-after-delete="" on-after-fill="" data-component="crn-datasource" class="component-holder" schema="[{&quot;name&quot;:&quot;id&quot;,&quot;type&quot;:&quot;String&quot;,&quot;nullable&quot;:false,&quot;key&quot;:true},{&quot;name&quot;:&quot;nome&quot;,&quot;type&quot;:&quot;String&quot;,&quot;nullable&quot;:true,&quot;key&quot;:false},{&quot;name&quot;:&quot;descricao&quot;,&quot;type&quot;:&quot;String&quot;,&quot;nullable&quot;:true,&quot;key&quot;:false},{&quot;name&quot;:&quot;endereco&quot;,&quot;type&quot;:&quot;String&quot;,&quot;nullable&quot;:true,&quot;key&quot;:false},{&quot;name&quot;:&quot;cep&quot;,&quot;type&quot;:&quot;String&quot;,&quot;nullable&quot;:true,&quot;key&quot;:false},{&quot;name&quot;:&quot;telefone&quot;,&quot;type&quot;:&quot;String&quot;,&quot;nullable&quot;:true,&quot;key&quot;:false},{&quot;name&quot;:&quot;user&quot;,&quot;type&quot;:&quot;String&quot;,&quot;nullable&quot;:true,&quot;key&quot;:false},{&quot;name&quot;:&quot;cidade&quot;,&quot;type&quot;:&quot;String&quot;,&quot;nullable&quot;:true,&quot;key&quot;:false},{&quot;name&quot;:&quot;bairro&quot;,&quot;type&quot;:&quot;String&quot;,&quot;nullable&quot;:true,&quot;key&quot;:false},{&quot;name&quot;:&quot;complemento&quot;,&quot;type&quot;:&quot;String&quot;,&quot;nullable&quot;:true,&quot;key&quot;:false},{&quot;name&quot;:&quot;uf&quot;,&quot;type&quot;:&quot;String&quot;,&quot;nullable&quot;:true,&quot;key&quot;:false},{&quot;name&quot;:&quot;user_email&quot;,&quot;type&quot;:&quot;String&quot;,&quot;nullable&quot;:true,&quot;key&quot;:false}]" condition=""></datasource><h1 data-component="crn-heading" class="component-holder text-center" id="crn-heading-600945" xattr-position="text-center">Selecione uma empresa para gerar o QR code</h1><div style="height: 50px;" data-component="crn-spacer" class="component-holder" id="crn-spacer-1062053">&nbsp;</div><label class="item item-input item-select center-block" data-component="crn-dynamic-select" id="crn-dynamic-select-692488" style="width:270px;"><span class="input-label">Selecionar Loja</span><select ng-model="vars.combobox2124" crn-datasource="obterempresas" class="form-control" id="dynamic-select-2124" name="dynamic-select-2124" xkey-field="id" xdisplay-field="nome"><option value="">None</option></select></label><div style="height: 50px;" data-component="crn-spacer" class="component-holder" id="crn-spacer-959894">&nbsp;</div><button class="button button-positive center-block" type="submit" xattr-fullsize="" xattr-theme="button-positive" ng-click="cronapi.server('blockly.Gerarqrcode.gerarqrcode').run()" data-component="crn-button" id="crn-button-146895"><i class="fa fa-qrcode"></i> <span>Gerar QR Code</span></button><div style="height: 80px;" data-component="crn-spacer" class="component-holder" id="crn-spacer-863399">&nbsp;</div><div qr="true" ng-model="vars.QR7336" data-component="crn-QRCode" class="center-block" id="crn-QRCode-416199"><div class=""> </div> </div></ion-content>
+</ion-view>

@@ -1,0 +1,41 @@
+<style title="local">
+
+</style><ion-view cache-view="false" can-swipe-back="false" class="pane login-bg" data-container="true">
+  <ion-content class="scroll-content center-content-vertically" data-component="crn-ion-content">
+    <div class="list" data-container="true">
+      <div class="col text-center">
+        <img src="img/logo.svg" class="component-holder logo" style="display: block; margin-left:auto; margin-right:auto;" xattr-position="display: block; margin-left:auto; margin-right:auto;" data-component="crn-image" id="crn-image-960683">
+      </div>
+    </div>
+    <form class="form-validation" autocomplete="off" name="form" role="form">
+      <div class="list list-inset login-mobile" data-container="true">
+        <label class="item item-input component-holder" data-component="crn-input-icon" id="crn-input-icon-228215">
+          <i class="icon placeholder-icon ion ion-person"></i>
+          <input autocomplete="off" autocorrect="off" autocapitalize="off" type="text" placeholder="{{'Login.view.Username' | translate}}" ng-model="vars.username">
+        </label>
+        <label class="item item-input component-holder" data-component="crn-input-icon" id="crn-input-icon37951">
+          <i class="icon placeholder-icon ion ion-asterisk"></i>
+          <input autocomplete="new-password" type="password" placeholder="{{'Login.view.Password' | translate}}" ng-model="vars.password">
+        </label>
+        <label class="item">
+          <button class="button component-holder button-full button-positive" type="button" ng-click="cronapi.client('js.blockly.auth.Login.login').run(vars.username, vars.password, null)" data-component="crn-button" id="crn-button-445347" xattr-fullsize="button-full" xattr-theme="button-positive" ng-disabled="form.$invalid || vm.dataLoading">
+            <i class=""></i>
+            <span>{{"Login.view.Login" | translate}}</span>
+          </button>
+        </label>
+        <label class="item">
+          <div ng-show="message.error" class="help-block" data-container="true">
+            {{message.error}}
+          </div>
+        </label>
+      </div><ion-item class="item dark text-left component-holder" xattr-theme="dark" xattr-text-position="text-left" data-replace="false" data-component="crn-list-item" id="crn-list-item-752036"><p xattr-position="text-center" class="text-center component-holder style2719" data-component="crn-paragraph" id="crn-paragraph-644079">Não tem Cadastro ? , clique no link abaixo</p><button class="button button-block button-clear button-energized" type="submit" xattr-fullsize="button-block" xattr-theme="button-energized" ng-click="cronapi.client('js.blockly.Modalcadastro.exibirmodal').run()" data-component="crn-button" id="crn-button-136382"><i class="" xattr-icon-theme=""></i> <span>Cadastre-se</span></button></ion-item>
+    </form>
+  </ion-content>
+</ion-view>
+ <script type="text/ng-template" id="modal36124"><ion-modal-view>
+   <ion-header-bar align-title="left" class="bar bar-light" data-component="crn-ion-header-bar" xattr-theme="bar-light">
+     
+   <h2 xattr-position="text-center" class="component-holder text-center" data-component="crn-label" id="crn-label-329166">Cadastre-se</h2><div style="height: 3px;" data-component="crn-spacer" class="" id="crn-spacer-517446">&nbsp;</div><div style="width:30px;" data-component="crn-spacer" class="col-xs-5" id="crn-spacer-404935">&nbsp;</div><button class="button button-positive button-small button-clear" type="submit" xattr-fullsize="" xattr-theme="button-positive" ng-click="cronapi.client('js.blockly.Modalcadastro.escodermodal').run()" data-component="crn-button" id="crn-button-714767" xattr-size="button-small" xattr-type="button-clear" ng-style="margin-left:200px;"><i class="ion ion-android-arrow-back positive" xattr-icon-theme="positive"></i> <span>Voltar</span></button></ion-header-bar>
+  <ion-content class="scroll-content has-header" data-component="crn-ion-content">
+       <div style="height: 40px;" data-component="crn-spacer" class="component-holder" id="crn-spacer-667694">&nbsp;</div><label class="item item-input component-holder" data-component="crn-input" id="crn-input-988774"><input id="textinput-id" type="text" placeholder="Seu nome completo" ng-model="vars.nome" mask=""></label><label class="item item-input component-holder" data-component="crn-input" id="crn-input-384116"><input id="textinput-id" type="text" placeholder="Email" ng-model="vars.email" mask=""></label><label class="item item-input component-holder" data-component="crn-input" id="crn-input84181"><input id="textinput-id" type="text" placeholder="Login" ng-model="vars.var_login" mask=""></label><label class="item item-input component-holder" data-component="crn-input" id="crn-input3911"><input id="textinput-id" type="password" placeholder="Senha" ng-model="vars.senha" mask=""></label><label class="item item-input component-holder" data-component="crn-input" id="crn-input69021"><input id="textinput-id" type="password" placeholder="Por favor digite a senha novamente" ng-model="vars.senha_confere" mask=""></label><button class="button button-block button-positive component-holder" type="submit" xattr-fullsize="button-block" xattr-theme="button-positive" ng-click="cronapi.server('blockly.Cadastro.cadastrousuario').run()" data-component="crn-button" id="crn-button-1040643"><i class="ion ion-android-checkmark-circle"></i> <span>Confirmar</span></button></ion-content>
+  </ion-modal-view></script>

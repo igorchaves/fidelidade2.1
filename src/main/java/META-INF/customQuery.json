@@ -1,0 +1,434 @@
+{
+  "auth": {
+    "customId": "auth",
+    "queryName": "Autenticar",
+    "screen": "",
+    "sourceType": "entityFullName",
+    "entitySimpleName": "User",
+    "entityFullName": "app.entity.User",
+    "query": "select o from User o where o.login \u003d :login",
+    "queryParamsValues": [
+      {
+        "fieldName": "login",
+        "fieldValue": ""
+      }
+    ],
+    "verbs": {
+      "GET": false,
+      "POST": false,
+      "PUT": false,
+      "DELETE": false
+    },
+    "events": {},
+    "defaultValues": {},
+    "security": {},
+    "errorHandles": {},
+    "serviceUrl": "api/cronapi/query/auth/"
+  },
+  "roles": {
+    "customId": "roles",
+    "queryName": "Obter Autorização",
+    "screen": "",
+    "sourceType": "entityFullName",
+    "entitySimpleName": "Role",
+    "entityFullName": "app.entity.Role",
+    "query": "select o.id from Role o where o.user.login \u003d :login",
+    "queryParamsValues": [
+      {
+        "fieldName": "login",
+        "fieldValue": ""
+      }
+    ],
+    "verbs": {
+      "GET": false,
+      "POST": false,
+      "PUT": false,
+      "DELETE": false,
+      "FILTER": true
+    },
+    "events": {},
+    "defaultValues": {},
+    "security": {},
+    "calcFields": {},
+    "calcFieldsSecurity": {},
+    "errorHandles": {},
+    "serviceUrl": "api/cronapi/query/roles/"
+  },
+  "device": {
+    "customId": "device",
+    "queryName": "Atualizar Dispositivos",
+    "screen": "",
+    "sourceType": "entityFullName",
+    "entitySimpleName": "Device",
+    "entityFullName": "app.entity.Device",
+    "query": {
+      "isValid": true,
+      "isEmpty": false,
+      "operationType": "object",
+      "type": "select",
+      "rulesEntity": [
+        {
+          "entity": "Device",
+          "namespace": "app.entity.Device",
+          "alias": "d"
+        }
+      ],
+      "rulesSelect": [
+        {
+          "func": "get",
+          "field": "d",
+          "type": "string"
+        }
+      ],
+      "rulesGroupBy": [],
+      "rulesHaving": [],
+      "rulesOrderBy": [],
+      "rules": {
+        "condition": "AND",
+        "rules": [
+          {
+            "id": "d.id",
+            "field": "d.id",
+            "type": "string",
+            "input": "text",
+            "operator": "equal",
+            "value": ":id",
+            "valueIsField": false
+          }
+        ],
+        "not": false,
+        "valid": true
+      },
+      "isRawSql": false,
+      "multiTenant": true,
+      "paginatorAutomatic": false
+    },
+    "queryParamsValues": [
+      {
+        "fieldName": "id",
+        "fieldValue": ""
+      }
+    ],
+    "verbs": {
+      "GET": true,
+      "POST": true,
+      "PUT": true,
+      "DELETE": true,
+      "FILTER": true
+    },
+    "events": {},
+    "defaultValues": {},
+    "security": {},
+    "calcFields": {},
+    "calcFieldsSecurity": {},
+    "errorHandles": {},
+    "serviceUrl": "api/cronapi/query/1jy88nt41afza/"
+  },
+  "query218901": {
+    "customId": "obterloja",
+    "queryName": "obterloja",
+    "sourceType": "entityFullName",
+    "entitySimpleName": "loja",
+    "entityFullName": "app.entity.loja",
+    "query": {
+      "isValid": true,
+      "isEmpty": false,
+      "operationType": "object",
+      "type": "select",
+      "rulesEntity": [
+        {
+          "entity": "loja",
+          "namespace": "app.entity.loja",
+          "alias": "l"
+        }
+      ],
+      "rulesSelect": [
+        {
+          "func": "get",
+          "field": "l",
+          "type": "string"
+        }
+      ],
+      "rulesGroupBy": [],
+      "rulesHaving": [],
+      "rulesOrderBy": [],
+      "rules": {
+        "condition": "AND",
+        "rules": [],
+        "not": false,
+        "valid": true
+      },
+      "isRawSql": false,
+      "multiTenant": true,
+      "paginatorAutomatic": false
+    },
+    "queryParamsValues": [],
+    "verbs": {
+      "GET": true,
+      "POST": true,
+      "PUT": true,
+      "DELETE": true,
+      "FILTER": true,
+      "COUNT": true
+    },
+    "events": {},
+    "defaultValues": {
+      "user": {
+        "type": "server",
+        "blocklyMethod": "obterusuariologado",
+        "blocklyClass": "blockly.Obterusuario",
+        "blocklyLanguage": "java",
+        "blocklyParams": [],
+        "blocklyJson": {
+          "namespace": "blockly.Obterusuario",
+          "sourcePath": "src/main/java/blockly/obterusuario.blockly",
+          "language": "java",
+          "methods": [
+            {
+              "name": "obterusuariologado",
+              "hasReturn": "true",
+              "params": []
+            }
+          ]
+        }
+      }
+    },
+    "defaultValuesProperties": {},
+    "security": {},
+    "calcFields": {},
+    "calcFieldsSecurity": {},
+    "calcFieldsProperties": {},
+    "errorHandles": {},
+    "serviceUrl": "api/cronapi/odata/v2/query218901/"
+  },
+  "query123208": {
+    "customId": "obterpontuacao",
+    "queryName": "obterpontuacao",
+    "sourceType": "entityFullName",
+    "entitySimpleName": "pontuacao",
+    "entityFullName": "app.entity.pontuacao",
+    "query": {
+      "isValid": true,
+      "isEmpty": false,
+      "operationType": "object",
+      "type": "select",
+      "rulesEntity": [
+        {
+          "entity": "pontuacao",
+          "namespace": "app.entity.pontuacao",
+          "alias": "p"
+        }
+      ],
+      "rulesSelect": [
+        {
+          "func": "count",
+          "field": "p.pontos",
+          "type": "integer"
+        }
+      ],
+      "rulesGroupBy": [],
+      "rulesHaving": [],
+      "rulesOrderBy": [],
+      "rules": {
+        "condition": "AND",
+        "rules": [
+          {
+            "id": "p.user.id",
+            "field": "p.user.id",
+            "type": "string",
+            "input": "text",
+            "operator": "equal",
+            "value": ":userId",
+            "valueIsField": false
+          }
+        ],
+        "not": false,
+        "valid": true
+      },
+      "isRawSql": false,
+      "multiTenant": true,
+      "paginatorAutomatic": false
+    },
+    "queryParamsValues": [
+      {
+        "fieldName": "userId",
+        "fieldValue": {
+          "type": "server",
+          "blocklyMethod": "obterusuariologado",
+          "blocklyClass": "blockly.Obterusuario",
+          "blocklyLanguage": "java",
+          "blocklyParams": [],
+          "blocklyJson": {
+            "namespace": "blockly.Obterusuario",
+            "sourcePath": "src/main/java/blockly/obterusuario.blockly",
+            "language": "java",
+            "methods": [
+              {
+                "name": "obterusuariologado",
+                "hasReturn": "true",
+                "params": []
+              }
+            ]
+          }
+        }
+      }
+    ],
+    "verbs": {
+      "GET": true,
+      "POST": true,
+      "PUT": true,
+      "DELETE": true,
+      "FILTER": true,
+      "COUNT": true
+    },
+    "events": {},
+    "defaultValues": {},
+    "defaultValuesProperties": {},
+    "security": {},
+    "calcFields": {},
+    "calcFieldsSecurity": {},
+    "calcFieldsProperties": {},
+    "errorHandles": {},
+    "serviceUrl": "api/cronapi/odata/v2/query123208/"
+  },
+  "query879593": {
+    "customId": "obterempresas",
+    "queryName": "obtrerempresas",
+    "sourceType": "entityFullName",
+    "entitySimpleName": "loja",
+    "entityFullName": "app.entity.loja",
+    "query": {
+      "isValid": true,
+      "rulesEntity": [
+        {
+          "entity": "loja",
+          "alias": "l",
+          "namespace": "app.entity.loja"
+        }
+      ],
+      "rulesSelect": [
+        {
+          "func": "get",
+          "field": "l"
+        }
+      ],
+      "rulesGroupBy": [],
+      "rulesHaving": [],
+      "rulesOrderBy": [],
+      "rules": {
+        "condition": "AND",
+        "not": false,
+        "valid": true,
+        "rules": []
+      }
+    },
+    "queryParamsValues": [],
+    "verbs": {
+      "GET": true,
+      "POST": true,
+      "PUT": true,
+      "DELETE": true,
+      "FILTER": true,
+      "COUNT": true
+    },
+    "events": {},
+    "defaultValues": {},
+    "defaultValuesProperties": {},
+    "security": {},
+    "calcFields": {},
+    "calcFieldsSecurity": {},
+    "calcFieldsProperties": {},
+    "errorHandles": {},
+    "serviceUrl": "api/cronapi/odata/v2/query879593/"
+  },
+  "query810317": {
+    "customId": "pontosdetalhados",
+    "queryName": "obterrlojaepontos",
+    "sourceType": "entityFullName",
+    "entitySimpleName": "pontuacao",
+    "entityFullName": "app.entity.pontuacao",
+    "query": {
+      "isValid": true,
+      "isEmpty": false,
+      "operationType": "object",
+      "type": "select",
+      "rulesEntity": [
+        {
+          "entity": "pontuacao",
+          "namespace": "app.entity.pontuacao",
+          "alias": "p"
+        }
+      ],
+      "rulesSelect": [
+        {
+          "func": "get",
+          "field": "p",
+          "type": "string"
+        }
+      ],
+      "rulesGroupBy": [],
+      "rulesHaving": [],
+      "rulesOrderBy": [],
+      "rules": {
+        "condition": "AND",
+        "rules": [
+          {
+            "id": "p.user.id",
+            "field": "p.user.id",
+            "type": "string",
+            "input": "text",
+            "operator": "equal",
+            "value": ":userId",
+            "valueIsField": false
+          }
+        ],
+        "not": false,
+        "valid": true
+      },
+      "isRawSql": false,
+      "multiTenant": true,
+      "paginatorAutomatic": false
+    },
+    "queryParamsValues": [
+      {
+        "fieldName": "userId",
+        "fieldValue": {
+          "type": "server",
+          "blocklyMethod": "obterusuariologado",
+          "blocklyClass": "blockly.Obterusuario",
+          "blocklyLanguage": "java",
+          "blocklyParams": [],
+          "blocklyJson": {
+            "namespace": "blockly.Obterusuario",
+            "sourcePath": "src/main/java/blockly/obterusuario.blockly",
+            "language": "java",
+            "methods": [
+              {
+                "name": "obterusuariologado",
+                "hasReturn": "true",
+                "params": []
+              }
+            ]
+          }
+        }
+      }
+    ],
+    "verbs": {
+      "GET": true,
+      "POST": true,
+      "PUT": true,
+      "DELETE": true,
+      "FILTER": true,
+      "COUNT": true
+    },
+    "events": {},
+    "defaultValues": {},
+    "defaultValuesProperties": {},
+    "security": {},
+    "calcFields": {},
+    "calcFieldsSecurity": {},
+    "calcFieldsProperties": {},
+    "errorHandles": {},
+    "serviceUrl": "api/cronapi/odata/v2/query810317/"
+  }
+}

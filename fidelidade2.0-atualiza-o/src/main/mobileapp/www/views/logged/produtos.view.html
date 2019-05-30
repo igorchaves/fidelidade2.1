@@ -1,0 +1,55 @@
+<ion-view cache-view="false" hide-back-button="true" class="pane">
+  <ion-header-bar class="bar bar-header bar-positive" xattr-theme="bar-positive" data-component="crn-ion-header-bar">
+      <div side="left" class="buttons buttons-left header-item">
+        <button class="button button-clear" ng-if="!produtos.inserting &amp;&amp; !produtos.editing" menu-toggle="left" data-component="crn-button" xattr-type="button-clear"> <i class="icon ion-navicon"></i> </button>
+        <button class="button button-clear" ng-if="produtos.inserting || produtos.editing" ng-click="produtos.cancel()" data-component="crn-button" xattr-type="button-clear"> <i class="icon ion-ios-arrow-back"></i> </button>
+      </div>
+        <h1 class="title">produtos</h1>
+      <div side="right" class="buttons buttons-right header-item">
+        <button class="button button-clear" ng-if="!produtos.inserting &amp;&amp; !produtos.editing" ng-click="produtos.startInserting()" data-component="crn-button" xattr-type="button-clear" cronapp-security="visible : Administrators, enabled : Administrators"> <i class="icon ion-ios-plus-empty"></i> </button>
+        <button class="button button-clear" ng-if="produtos.inserting || produtos.editing" ng-click="produtos.post()" data-component="crn-button" xattr-type="button-clear"> <i class="icon ion-ios-checkmark"></i> </button>
+      </div>
+  </ion-header-bar>
+  <ion-content class="scroll-content has-header" data-component="crn-ion-content">
+    <div class="component-holder ng-binding ng-scope ui-draggable ui-draggable-handle" data-component="crn-datasource" id="crn-datasource-906854">
+      <datasource name="produtos" entity="app.produtos" keys="id" rows-per-page="10" delete-message="Deseja remover?" class="" schema="[{&quot;name&quot;:&quot;id&quot;,&quot;type&quot;:&quot;String&quot;,&quot;nullable&quot;:false,&quot;key&quot;:true},{&quot;name&quot;:&quot;nome&quot;,&quot;type&quot;:&quot;String&quot;,&quot;nullable&quot;:true,&quot;key&quot;:false},{&quot;name&quot;:&quot;descricao&quot;,&quot;type&quot;:&quot;String&quot;,&quot;nullable&quot;:true,&quot;key&quot;:false},{&quot;name&quot;:&quot;preco&quot;,&quot;type&quot;:&quot;String&quot;,&quot;nullable&quot;:true,&quot;key&quot;:false},{&quot;name&quot;:&quot;loja_1&quot;,&quot;type&quot;:&quot;String&quot;,&quot;nullable&quot;:true,&quot;key&quot;:false},{&quot;name&quot;:&quot;loja_1_nome&quot;,&quot;type&quot;:&quot;String&quot;,&quot;nullable&quot;:true,&quot;key&quot;:false}]"></datasource>
+    </div>
+	
+    <div crn-datasource="produtos" class="" ng-hide="produtos.editing || produtos.inserting">
+      <div class="component-holder ng-binding ng-scope" data-component="crn-ion-list" id="crn-ion-list-main">
+        <cron-list id="ion-list-main" options="{&quot;dataSourceScreen&quot;:{&quot;name&quot;:&quot;produtos&quot;,&quot;entity&quot;:&quot;app.produtos&quot;,&quot;entityDataSource&quot;:{&quot;id&quot;:&quot;app.produtos&quot;,&quot;customId&quot;:&quot;produtos&quot;,&quot;name&quot;:&quot;produtos&quot;,&quot;customQueryName&quot;:&quot;app.produtos&quot;,&quot;paramValues&quot;:[],&quot;entityFullName&quot;:&quot;app.entity.produtos&quot;,&quot;schemaFields&quot;:[{&quot;name&quot;:&quot;id&quot;,&quot;type&quot;:&quot;String&quot;,&quot;nullable&quot;:false,&quot;key&quot;:true},{&quot;name&quot;:&quot;nome&quot;,&quot;type&quot;:&quot;String&quot;,&quot;nullable&quot;:true,&quot;key&quot;:false},{&quot;name&quot;:&quot;descricao&quot;,&quot;type&quot;:&quot;String&quot;,&quot;nullable&quot;:true,&quot;key&quot;:false},{&quot;name&quot;:&quot;preco&quot;,&quot;type&quot;:&quot;String&quot;,&quot;nullable&quot;:true,&quot;key&quot;:false},{&quot;name&quot;:&quot;loja_1&quot;,&quot;type&quot;:&quot;String&quot;,&quot;nullable&quot;:true,&quot;key&quot;:false},{&quot;name&quot;:&quot;loja_1_nome&quot;,&quot;type&quot;:&quot;String&quot;,&quot;nullable&quot;:true,&quot;key&quot;:false}],&quot;type&quot;:&quot;entity&quot;},&quot;schema&quot;:[{&quot;name&quot;:&quot;id&quot;,&quot;type&quot;:&quot;String&quot;,&quot;nullable&quot;:false,&quot;key&quot;:true},{&quot;name&quot;:&quot;nome&quot;,&quot;type&quot;:&quot;String&quot;,&quot;nullable&quot;:true,&quot;key&quot;:false},{&quot;name&quot;:&quot;descricao&quot;,&quot;type&quot;:&quot;String&quot;,&quot;nullable&quot;:true,&quot;key&quot;:false},{&quot;name&quot;:&quot;preco&quot;,&quot;type&quot;:&quot;String&quot;,&quot;nullable&quot;:true,&quot;key&quot;:false},{&quot;name&quot;:&quot;loja_1&quot;,&quot;type&quot;:&quot;String&quot;,&quot;nullable&quot;:true,&quot;key&quot;:false},{&quot;name&quot;:&quot;loja_1_nome&quot;,&quot;type&quot;:&quot;String&quot;,&quot;nullable&quot;:true,&quot;key&quot;:false}],&quot;id&quot;:&quot;app.produtos&quot;},&quot;allowPaging&quot;:true,&quot;allowSorting&quot;:true,&quot;allowGrouping&quot;:false,&quot;allowSelectionTotalPageToShow&quot;:true,&quot;allowRefreshGrid&quot;:true,&quot;allowSelectionRow&quot;:true,&quot;hideModalButtons&quot;:true,&quot;editable&quot;:&quot;datasource&quot;,&quot;columns&quot;:[{&quot;dataType&quot;:&quot;Database&quot;,&quot;field&quot;:&quot;nome&quot;,&quot;headerText&quot;:&quot;Nome&quot;,&quot;type&quot;:&quot;string&quot;,&quot;sortable&quot;:true,&quot;filterable&quot;:true,&quot;format&quot;:&quot;&quot;,&quot;visible&quot;:true,&quot;visibleCrud&quot;:true,&quot;linkParentType&quot;:&quot;screen&quot;,&quot;linkParentLoadIfEmpty&quot;:false,&quot;required&quot;:false,&quot;inputType&quot;:&quot;default&quot;,&quot;aggregates&quot;:[]},{&quot;dataType&quot;:&quot;Database&quot;,&quot;field&quot;:&quot;descricao&quot;,&quot;headerText&quot;:&quot;Descricao&quot;,&quot;type&quot;:&quot;string&quot;,&quot;sortable&quot;:true,&quot;filterable&quot;:false,&quot;format&quot;:&quot;&quot;,&quot;visible&quot;:true,&quot;visibleCrud&quot;:true,&quot;linkParentType&quot;:&quot;screen&quot;,&quot;linkParentLoadIfEmpty&quot;:false,&quot;required&quot;:false,&quot;inputType&quot;:&quot;default&quot;,&quot;aggregates&quot;:[]},{&quot;dataType&quot;:&quot;Command&quot;,&quot;sortable&quot;:false,&quot;filterable&quot;:false,&quot;visible&quot;:true,&quot;visibleCrud&quot;:true,&quot;linkParentType&quot;:&quot;screen&quot;,&quot;linkParentLoadIfEmpty&quot;:false,&quot;command&quot;:&quot;edit|destroy&quot;,&quot;required&quot;:false,&quot;inputType&quot;:&quot;default&quot;,&quot;aggregates&quot;:[]}],&quot;toolBarButtons&quot;:[{&quot;type&quot;:&quot;Native&quot;,&quot;title&quot;:&quot;create&quot;}],&quot;details&quot;:[],&quot;groupings&quot;:[]}" class="" style="">
+        </cron-list>
+      </div>
+    </div>
+    <div ng-show="produtos.editing || produtos.inserting">
+      <form crn-datasource="produtos">
+        <fieldset ng-disabled="!produtos.editing &amp;&amp; !produtos.inserting">
+            <!-- nome begin -->
+            <label for="textinput-nome-49880" class="item item-input item-stacked-label" data-component="crn-input-floating">
+              <span class="input-label">Nome</span>
+              <input type="text" placeholder="Nome" ng-model="produtos.active.nome" id="textinput-nome-49880" name="textinput-nome" mask="">
+            </label>
+            <!-- descricao begin -->
+            <label for="textinput-descricao-49880" class="item item-input item-stacked-label" data-component="crn-input-floating">
+              <span class="input-label">Descricao</span>
+              <input type="text" placeholder="Descricao" ng-model="produtos.active.descricao" id="textinput-descricao-49880" name="textinput-descricao" mask="">
+            </label>
+            <!-- id begin -->
+            
+            <!-- preco begin -->
+            <label for="textinput-preco-49880" class="item item-input item-stacked-label" data-component="crn-input-floating">
+              <span class="input-label">Preco</span>
+              <input type="text" placeholder="Preco" ng-model="produtos.active.preco" id="textinput-preco-49880" name="textinput-preco" mask="">
+            </label>
+            <!-- loja_1 begin -->
+            <datasource name="Loja1" entity="app.loja" keys="id" class="" schema="[{&quot;name&quot;:&quot;id&quot;,&quot;type&quot;:&quot;String&quot;,&quot;nullable&quot;:false,&quot;key&quot;:true},{&quot;name&quot;:&quot;nome&quot;,&quot;type&quot;:&quot;String&quot;,&quot;nullable&quot;:true,&quot;key&quot;:false},{&quot;name&quot;:&quot;descricao&quot;,&quot;type&quot;:&quot;String&quot;,&quot;nullable&quot;:true,&quot;key&quot;:false},{&quot;name&quot;:&quot;endereco&quot;,&quot;type&quot;:&quot;String&quot;,&quot;nullable&quot;:true,&quot;key&quot;:false},{&quot;name&quot;:&quot;cep&quot;,&quot;type&quot;:&quot;String&quot;,&quot;nullable&quot;:true,&quot;key&quot;:false},{&quot;name&quot;:&quot;telefone&quot;,&quot;type&quot;:&quot;String&quot;,&quot;nullable&quot;:true,&quot;key&quot;:false},{&quot;name&quot;:&quot;user&quot;,&quot;type&quot;:&quot;String&quot;,&quot;nullable&quot;:true,&quot;key&quot;:false},{&quot;name&quot;:&quot;user_email&quot;,&quot;type&quot;:&quot;String&quot;,&quot;nullable&quot;:true,&quot;key&quot;:false}]"></datasource>
+            
+
+            <!-- NtoN  -->
+            <!-- NtoN  end-->
+
+        </fieldset>
+      </form>
+    </div>
+  </ion-content>
+</ion-view>
